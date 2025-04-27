@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validation Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="frame">
+    <h2>If validations aren’t correct!</h2>
+    <form id="form1">
+      <label for="email1">Email</label>
+      <input type="text" id="email1" placeholder="Example@email.com" oninput="validateEmail(this, 'errorEmail1')">
+      <p class="error" id="errorEmail1"></p>
+
+      <label for="password1">Password</label>
+      <input type="password" id="password1" placeholder="Your Password" oninput="validatePassword(this, 'errorPassword1')">
+      <p class="error" id="errorPassword1"></p>
+
+      <button type="button" onclick="submitForm('email1', 'password1')">Submit</button>
+    </form>
+  </div>
+
+  <div class="frame">
+    <h2>If validations are correct!</h2>
+    <form id="form2">
+      <label for="email2">Email</label>
+      <input type="text" id="email2" placeholder="Example@email.com" oninput="validateEmail(this, 'errorEmail2')">
+      
+      <label for="password2">Password</label>
+      <input type="password" id="password2" placeholder="Your Password" oninput="validatePassword(this, 'errorPassword2')">
+      
+      <p class="success" id="successMessage"></p>
+
+      <button type="button" onclick="submitForm('email2', 'password2')">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
